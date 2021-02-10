@@ -93,7 +93,7 @@ for fn in input_fns:
       if verbose:
         print("Next line: %s" % lines[input_line], file=sys.stderr)
 
-      quantity = int(float(parts[0]))
+      quantity = float(parts[0])
       total_shares += quantity
       symbol = parts[3]
       if (symbol != 'GOOG' and symbol != 'GOOGL') or quantity <= 0:
@@ -151,9 +151,9 @@ for fn in input_fns:
 
       if verbose:
         if wash:
-          print("Read record: (symbol:%s,\tacq_date:%s,\tsale_date:%s,\tquantity:%d,\tproceeds:$%.2f,\tbasis:$%.2f,\twash:$%.2f)" % (symbol, acq_date, sale_date, quantity, proceeds, basis, wash), file=sys.stderr)
+          print("Read record: (symbol:%s,\tacq_date:%s,\tsale_date:%s,\tquantity:%.3f,\tproceeds:$%.2f,\tbasis:$%.2f,\twash:$%.2f)" % (symbol, acq_date, sale_date, quantity, proceeds, basis, wash), file=sys.stderr)
         else:
-          print("Read record: (symbol:%s,\tacq_date:%s,\tsale_date:%s,\tquantity:%d,\tproceeds:$%.2f,\tbasis:$%.2f)" % (symbol, acq_date, sale_date, quantity, proceeds, basis), file=sys.stderr)
+          print("Read record: (symbol:%s,\tacq_date:%s,\tsale_date:%s,\tquantity:%.3f,\tproceeds:$%.2f,\tbasis:$%.2f)" % (symbol, acq_date, sale_date, quantity, proceeds, basis), file=sys.stderr)
       total_num_records += 1
 
       total_proceeds += proceeds
