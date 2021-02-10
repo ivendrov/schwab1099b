@@ -141,10 +141,10 @@ for fn in input_fns:
       transaction['wash'] = wash
 
       if short_term:
-        transaction['category'] = '2'  # Box B - Short term noncovered
+        transaction['category'] = '1'  # Box B - Short term noncovered
         short_sales.append(transaction)
       else:
-        transaction['category'] = '5'  # Box E - Long term noncovered
+        transaction['category'] = '4'  # Box E - Long term noncovered
         long_sales.append(transaction)
 
       input_line += 1
