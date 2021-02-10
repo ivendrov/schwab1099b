@@ -18,10 +18,15 @@ const eltIds = {
   'wash' : 'stk-transaction-summary-entry-views-0-fields-12-collection-values-0-fieldCollection-values-1-input-WashSaleLossDisallowedAmtPP',
   'continue2' : 'stk-uncommon-views-0-actions-1-action_Next',
   'add_another' : 'stk-transaction-gateway-views-5-primaryInfo-0-table-SecurityDetailPP-actions-0-action_AddItem',
+  'type' : 'stk-transaction-summary-entry-views-0-fields-0-staticSwitch-1-choice-InvestmentType',
 }
 
 function selectValueFor(category) {
   return "stk-transaction-summary-entry-views-0-fields-3-choice-Form8949CodePP-choices-" + category;
+}
+
+function selectValueForType() {
+  return "stk-transaction-summary-entry-views-0-fields-0-staticSwitch-1-choice-InvestmentType-choices-3";
 }
 
 function waitFor(millisecs) {
@@ -115,13 +120,18 @@ function enterOneRow(data, haveMore) {
       .then(shortPause)
       .then(dispatchChangeEvent.bind(null, eltIds['category']))
       .then(shortPause)
+      .then(clickAndEnter.bind(null, eltIds['type'], selectValueForType()))
+      .then(shortPause)
+      .then(dispatchChangeEvent.bind(null, eltIds['type']))
+      .then(shortPause)
       .then(click.bind(null, eltIds['more_boxes']))
       .then(shortPause)
       .then(data["wash"] ? clickAndEnter.bind(null, eltIds['wash'], data["wash"]) : shortPause())
       .then(shortPause)
       .then(click.bind(null, eltIds['continue']))
-      .then(longPause)
-      .then(click.bind(null, eltIds['continue2']));
+      .then(longPause);
+	/*
+      .then(click.bind(null, eltIds['continue2'])); */
     
   if (haveMore) {
       return promise
