@@ -27,7 +27,7 @@ def print_and_zero_totals():
 
   print("********", file=sys.stderr)
   print("Total # records read: %d" % total_num_records, file=sys.stderr)
-  print('Total shares: %d' % total_shares, file=sys.stderr)
+  print('Total shares: %.3f' % total_shares, file=sys.stderr)
   print("Verify these totals with the summary of the last page of the Schwab Statement", file=sys.stderr)
   print("Total Proceeds: $%.2f" % total_proceeds, file=sys.stderr)
   print("Total Basis: $%.2f" % total_basis, file=sys.stderr)
