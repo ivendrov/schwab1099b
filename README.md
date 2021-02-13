@@ -73,7 +73,7 @@ Complete Steps 1 through 3 as described for TurboTax online, obtaining an `entri
 instead of using this file in Chrome, run the following command to convert it to a Tax eXchange
 Format (TXF) file that TurboTax Desktop can process:
 
-`$ ./.json-to-txf entries.json > entries.txf`
+`$ ./json-to-txf < entries.json > entries.txf`
 
 In TurboTax, import `entries.txf` via the File -> Import -> From Accounting Software menu. Verify
 that the short- and long-term totals imported as expected.
