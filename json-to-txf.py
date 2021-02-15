@@ -29,7 +29,7 @@ for transaction in transactions:
 
     # TXF common record fields:
     print('TD') # Type: Detail
-    if (transaction['category'] == '2'):
+    if (transaction['category'] == '1'):
       print('N711') # Refnum: ST gain/loss 8949 Copy B
     else:
       print('N713') # Refnum: LT gain/loss 8949 Copy B
