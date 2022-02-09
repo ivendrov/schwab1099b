@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''Convert Schwab EAC 1099 to JSON format.
 See README.md for instructions on using this script.
 '''

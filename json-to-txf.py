@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Convert JSON file from convert-1099b-json.py to TXF for import.
 See README.md for instructions on using this script.
 """
