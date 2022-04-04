@@ -10,7 +10,7 @@ const eltIds = {
   'acq_date_radio' : 'stk-transaction-summary-entry-views-0-fields-5-choice-IsDateAcquiredALiteralInd',
   'acq' : 'stk-transaction-summary-entry-views-0-fields-5-choice-IsDateAcquiredALiteralInd-choices-0-choiceDetail-input-DateAcquiredDtPP',
   'sale' : 'stk-transaction-summary-entry-views-0-fields-7-input-DateSoldOrDisposedDtPP',
-  'proceeds' : 'stk-transaction-summary-entry-views-0-fields-8-input-ProceedsAmtPP',
+  'proceeds' : 'stk-transaction-summary-entry-views-0-fields-9-input-ProceedsAmtPP',
   'basis' : 'stk-transaction-summary-entry-views-0-fields-9-input-CostBasisAmtPP',
   'category' : 'stk-transaction-summary-entry-views-0-fields-3-choice-Form8949CodePP',
   'continue' : 'stk-transaction-summary-entry-views-0-actions-1-action_Next',
